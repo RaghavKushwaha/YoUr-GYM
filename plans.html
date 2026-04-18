@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plans - YoUr GYM</title>
+     <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">💪 YoUr GYM</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="plans.html" class="nav-link active">Plans</a>
+                </li>
+                <li class="nav-item">
+                    <a href="workouts.html" class="nav-link">Workouts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+                 <li class="nav-item" id="loginNavItem">
+                    <a href="login.html" class="nav-link active">Login</a>
+                </li>
+                <li class="nav-item" id="logoutNavItem" style="display: none;">
+                    <a href="#" class="nav-link" onclick="handleLogout(event)">Logout</a>
+                </li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="container">
+        <section class="page-section">
+            <h1>Membership Plans</h1>
+            <p style="margin-bottom: 40px;">Choose the perfect plan for your fitness journey. All plans include full access to our facilities and basic support. Starting from just ₹5,000 per month!</p>
+            
+            <div class="features" style="margin-top: 40px;">
+                <div class="feature-card plan-card" style="border: 2px solid #ff6b6b; transform: scale(1.05);">
+                    <h3>🚀 Monthly Pass</h3>
+                    <p style="font-size: 2rem; color: #ff6b6b; margin: 20px 0; font-weight: 700;">₹5,000<span style="font-size: 1rem; color: #2d3436;">/month</span></p>
+                    <ul style="list-style: none; text-align: left; margin-bottom: 20px;">
+                        <li style="padding: 8px 0;">✓ Full gym access (24/7)</li>
+                        <li style="padding: 8px 0;">✓ All equipment access</li>
+                        <li style="padding: 8px 0;">✓ Locker room facility</li>
+                        <li style="padding: 8px 0;">✓ Basic fitness tracking</li>
+                    </ul>
+                    <button class="btn">Subscribe Now</button>
+                </div>
+
+                <div class="feature-card plan-card">
+                    <h3>⭐ Quarterly Pass</h3>
+                    <p style="font-size: 2rem; color: #ff6b6b; margin: 20px 0; font-weight: 700;">₹13,500<span style="font-size: 1rem; color: #2d3436;">/3 months</span></p>
+                    <ul style="list-style: none; text-align: left; margin-bottom: 20px;">
+                        <li style="padding: 8px 0;">✓ Everything in Monthly</li>
+                        <li style="padding: 8px 0;">✓ Free group classes</li>
+                        <li style="padding: 8px 0;">✓ 1 Fitness assessment</li>
+                        <li style="padding: 8px 0;">✓ 10% off on trainers</li>
+                    </ul>
+                    <button class="btn">Subscribe Now</button>
+                </div>
+
+                <div class="feature-card plan-card">
+                    <h3>👑 Annual Pass</h3>
+                    <p style="font-size: 2rem; color: #ff6b6b; margin: 20px 0; font-weight: 700;">₹45,000<span style="font-size: 1rem; color: #2d3436;">/year</span></p>
+                    <ul style="list-style: none; text-align: left; margin-bottom: 20px;">
+                        <li style="padding: 8px 0;">✓ Everything included</li>
+                        <li style="padding: 8px 0;">✓ Personal trainer sessions</li>
+                        <li style="padding: 8px 0;">✓ Quarterly assessments</li>
+                        <li style="padding: 8px 0;">✓ Free nutrition consultation</li>
+                    </ul>
+                    <button class="btn">Subscribe Now</button>
+                </div>
+            </div>
+
+            <h2 style=\"margin-top: 50px; margin-bottom: 20px;\">Plan Comparison</h2>
+            <div style=\"background: #f5f5f5; padding: 30px; border-radius: 8px; overflow-x: auto;\">
+                <table style=\"width: 100%; border-collapse: collapse;\">
+                    <thead>
+                        <tr style=\"background: #ff6b6b; color: white;\">
+                            <th style=\"padding: 15px; text-align: left; border: 1px solid #ddd;\">Feature</th>
+                            <th style=\"padding: 15px; text-align: center; border: 1px solid #ddd;\">Monthly</th>
+                            <th style=\"padding: 15px; text-align: center; border: 1px solid #ddd;\">Quarterly</th>
+                            <th style=\"padding: 15px; text-align: center; border: 1px solid #ddd;\">Annual</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style=\"padding: 15px; border: 1px solid #ddd;\"><strong>24/7 Access</strong></td>
+                            <td style=\"padding: 15px; text-align: center; border: 1px solid #ddd;\">✓</td>
+                            <td style=\"padding: 15px; text-align: center; border: 1px solid #ddd;\">✓</td>
+                            <td style=\"padding: 15px; text-align: center; border: 1px solid #ddd;\">✓</td>
+                        </tr>
+                        <tr style=\"background: #f9f9f9;\">
+                            <td style=\"padding: 15px; border: 1px solid #ddd;\"><strong>Group Classes</strong></td>
+                            <td style=\"padding: 15px; text-align: center; border: 1px solid #ddd;\">Paid</td>
+                            <td style=\"padding: 15px; text-align: center; border: 1px solid #ddd;\">✓ Free</td>
+                            <td style=\"padding: 15px; text-align: center; border: 1px solid #ddd;\">✓ Free</td>
+                        </tr>
+                        <tr>
+                            <td style=\"padding: 15px; border: 1px solid #ddd;\"><strong>Fitness Assessment</strong></td>
+                            <td style=\"padding: 15px; text-align: center; border: 1px solid #ddd;\">—</td>
+                            <td style=\"padding: 15px; text-align: center; border: 1px solid #ddd;\">✓</td>
+                            <td style=\"padding: 15px; text-align: center; border: 1px solid #ddd;\">✓ Quarterly</td>
+                        </tr>
+                        <tr style=\"background: #f9f9f9;\">
+                            <td style=\"padding: 15px; border: 1px solid #ddd;\"><strong>Personal Training</strong></td>
+                            <td style=\"padding: 15px; text-align: center; border: 1px solid #ddd;\">Paid</td>
+                            <td style=\"padding: 15px; text-align: center; border: 1px solid #ddd;\">10% off</td>
+                            <td style=\"padding: 15px; text-align: center; border: 1px solid #ddd;\">✓ Included</td>
+                        </tr>
+                        <tr>
+                            <td style=\"padding: 15px; border: 1px solid #ddd;\"><strong>Nutrition Consultation</strong></td>
+                            <td style=\"padding: 15px; text-align: center; border: 1px solid #ddd;\">—</td>
+                            <td style=\"padding: 15px; text-align: center; border: 1px solid #ddd;\">Paid</td>
+                            <td style=\"padding: 15px; text-align: center; border: 1px solid #ddd;\">✓ Free</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 YoUr GYM. All rights reserved.</p>
+    </footer>
+
+    <!-- Login Modal Popup -->
+    <div class="login-modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>💪 Login</h2>
+                <button class="close-btn" onclick="closeLoginModal()">&times;</button>
+            </div>
+            <div class="modal-error" id="modalError"></div>
+            <form class="modal-form" id="modalLoginForm" onsubmit="handleModalLogin(event)">
+                <div class="form-group">
+                    <label for="modalEmail">Email Address</label>
+                    <input type="email" id="modalEmail" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="modalPassword">Password</label>
+                    <input type="password" id="modalPassword" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="modal-login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

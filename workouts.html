@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workouts - YoUr GYM</title>
+     <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">💪 YoUr GYM</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="plans.html" class="nav-link">Plans</a>
+                </li>
+                <li class="nav-item">
+                    <a href="workouts.html" class="nav-link active">Workouts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+                <li class="nav-item" id="loginNavItem">
+                    <a href="login.html" class="nav-link active">Login</a>
+                </li>
+                <li class="nav-item" id="logoutNavItem" style="display: none;">
+                    <a href="#" class="nav-link" onclick="handleLogout(event)">Logout</a>
+                </li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="container">
+        <section class="page-section">
+            <h1>Workout Programs</h1>
+            <p style="margin-bottom: 40px;">Explore our comprehensive workout programs designed by certified trainers to help you achieve your fitness goals.</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3>💪 Strength Training</h3>
+                    <p>Build muscle and increase strength with our progressive resistance training programs. Perfect for beginners and advanced athletes.</p>
+                    <button class="btn" style="margin-top: 15px;">Learn More</button>
+                </div>
+
+                <div class="feature-card">
+                    <h3>❤️ Cardio & Conditioning</h3>
+                    <p>Improve your cardiovascular health with varied cardio routines including running, cycling, and HIIT workouts.</p>
+                    <button class="btn" style="margin-top: 15px;">Learn More</button>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🧘 Yoga & Flexibility</h3>
+                    <p>Enhance flexibility and balance through our yoga and stretching classes suitable for all fitness levels.</p>
+                    <button class="btn" style="margin-top: 15px;">Learn More</button>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🤸 CrossFit</h3>
+                    <p>High-intensity functional fitness combining weightlifting, gymnastics, and metabolic conditioning exercises.</p>
+                    <button class="btn" style="margin-top: 15px;">Learn More</button>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🏃 Weight Loss</h3>
+                    <p>Specialized programs combining cardio, strength training, and nutrition guidance to help you lose weight effectively.</p>
+                    <button class="btn" style="margin-top: 15px;">Learn More</button>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🥇 Athletic Performance</h3>
+                    <p>Sport-specific training designed to improve performance, agility, and endurance for competitive athletes.</p>
+                    <button class="btn" style="margin-top: 15px;">Learn More</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 YoUr GYM. All rights reserved.</p>
+    </footer>
+
+    <!-- Login Modal Popup -->
+    <div class="login-modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>💪 Login</h2>
+                <button class="close-btn" onclick="closeLoginModal()">&times;</button>
+            </div>
+            <div class="modal-error" id="modalError"></div>
+            <form class="modal-form" id="modalLoginForm" onsubmit="handleModalLogin(event)">
+                <div class="form-group">
+                    <label for="modalEmail">Email Address</label>
+                    <input type="email" id="modalEmail" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="modalPassword">Password</label>
+                    <input type="password" id="modalPassword" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="modal-login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

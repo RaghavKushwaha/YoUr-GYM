@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YoUr GYM - Home</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">💪 YoUr GYM</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="plans.html" class="nav-link">Plans</a>
+                </li>
+                <li class="nav-item">
+                    <a href="workouts.html" class="nav-link">Workouts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+                 <li class="nav-item" id="loginNavItem">
+                    <a href="login.html" class="nav-link active">Login</a>
+                </li>
+                <li class="nav-item" id="logoutNavItem" style="display: none;">
+                    <a href="#" class="nav-link" onclick="handleLogout(event)">Logout</a>
+                </li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="container">
+        <section class="hero">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?" alt="Gym Equipment" class="hero-image">
+            <div class="hero-content">
+                <h1>Welcome to YoUr GYM</h1>
+                <p>Transform your body, transform your life</p>
+                <button class="btn">Get Started</button>
+            </div>
+        </section>
+
+        <!-- About YoUr Gym Section -->
+        <section class="about-section">
+            <div class="about-content">
+                <h2>About YoUr GYM</h2>
+                <p>Welcome to YoUr GYM, India's premier fitness destination. With state-of-the-art equipment, expert trainers, and a supportive community, we're committed to helping you achieve your fitness goals. Whether you're a beginner or an advanced athlete, our gym provides everything you need for a transformative fitness journey.</p>
+                <div class="about-highlights">
+                    <div class="highlight">
+                        <h4>🏆 10+ Years Experience</h4>
+                        <p>Serving the fitness community with excellence</p>
+                    </div>
+                    <div class="highlight">
+                        <h4>500+ Active Members</h4>
+                        <p>Join our thriving fitness family</p>
+                    </div>
+                    <div class="highlight">
+                        <h4>24/7 Access</h4>
+                        <p>Train whenever you want</p>
+                    </div>
+                </div>
+            </div>
+            <img src="1.png" alt="Gym Equipment" class="about-image">
+        </section>
+
+        <!-- Workouts Section -->
+        <section class="workouts-preview">
+            <h2>Our Workout Programs</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <img src="https://cdn.prod.website-files.com/695d6fa8c10e768f30dec820/699dc704d8ad49db8f4f16fa_ChatGPT%20Image%20Feb%2024%2C%202026%2C%2010_42_56%20AM.png" alt="Strength Training">
+                    <h3>💪 Strength Training</h3>
+                    <p>Build muscle and increase strength with progressive resistance training.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://images.newscientist.com/wp-content/uploads/2024/07/22134502/quickest-to-fit.jpg?width=1100" alt="Cardio">
+                    <h3>❤️ Cardio & Conditioning</h3>
+                    <p>Improve cardiovascular health with varied cardio routines.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://proaction-pt.com/wp-content/uploads/2021/07/5-Benefits-of-Stretching-To-Improve-Your-Health-1024x400.jpg.webp" alt="Yoga">
+                    <h3>🧘 Yoga & Flexibility</h3>
+                    <p>Enhance flexibility and balance through yoga and stretching.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="workouts.html" class="btn">View All Programs</a>
+            </div>
+        </section>
+
+        <!-- Trainer Details Section -->
+        <section class="trainers-section">
+            <h2>Meet Our Expert Trainers</h2>
+            <div class="trainers-grid">
+                <div class="trainer-card">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop" alt="Trainer">
+                    <h3>Rahul Sharma</h3>
+                    <p class="trainer-title">Head Trainer - Strength & Conditioning</p>
+                    <p class="trainer-bio">15+ years of experience in fitness training. Specializes in strength building and weightlifting programs.</p>
+                    <div class="trainer-skills">Strength • Gym • Nutrition</div>
+                </div>
+                <div class="trainer-card">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop" alt="Trainer">
+                    <h3>Priya Verma</h3>
+                    <p class="trainer-title">Cardio & Weight Loss Specialist</p>
+                    <p class="trainer-bio">12+ years experience in weight loss and cardio training. Helped 1000+ clients achieve their goals.</p>
+                    <div class="trainer-skills">Cardio • Weight Loss • HIIT</div>
+                </div>
+                <div class="trainer-card">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop" alt="Trainer">
+                    <h3>Arjun Singh</h3>
+                    <p class="trainer-title">Yoga & Flexibility Coach</p>
+                    <p class="trainer-bio">Certified yoga instructor with 10+ years experience. Specializes in flexibility and mind-body wellness.</p>
+                    <div class="trainer-skills">Yoga • Flexibility • Wellness</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plans Preview Section -->
+        <section class="plans-preview">
+            <h2>Our Membership Plans</h2>
+            <p>Starting from ₹5,000/month</p>
+            <div class="features">
+                <div class="feature-card plan-card">
+                    <h3>🚀 Monthly Pass</h3>
+                    <p class="price">₹5,000<span>/month</span></p>
+                    <ul class="plan-features">
+                        <li>✓ Full gym access</li>
+                        <li>✓ All equipment</li>
+                        <li>✓ Locker facility</li>
+                    </ul>
+                    <button class="btn">Subscribe</button>
+                </div>
+                <div class="feature-card plan-card" style="border: 2px solid #ff6b6b;">
+                    <h3>⭐ Quarterly Pass</h3>
+                    <p class="price">₹13,500<span>/3 months</span></p>
+                    <ul class="plan-features">
+                        <li>✓ Everything in Monthly</li>
+                        <li>✓ Free group classes</li>
+                        <li>✓ Fitness assessment</li>
+                    </ul>
+                    <button class="btn">Subscribe</button>
+                </div>
+                <div class="feature-card plan-card">
+                    <h3>👑 Annual Pass</h3>
+                    <p class="price">₹45,000<span>/year</span></p>
+                    <ul class="plan-features">
+                        <li>✓ Everything + Premium</li>
+                        <li>✓ Personal trainer</li>
+                        <li>✓ Diet consultation</li>
+                    </ul>
+                    <button class="btn">Subscribe</button>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="plans.html" class="btn">View All Plans</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 YoUr GYM. All rights reserved.</p>
+    </footer>
+
+    <!-- Login Modal Popup -->
+    <div class="login-modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>💪 Login</h2>
+                <button class="close-btn" onclick="closeLoginModal()">&times;</button>
+            </div>
+            <div class="modal-error" id="modalError"></div>
+            <form class="modal-form" id="modalLoginForm" onsubmit="handleModalLogin(event)">
+                <div class="form-group">
+                    <label for="modalEmail">Email Address</label>
+                    <input type="email" id="modalEmail" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="modalPassword">Password</label>
+                    <input type="password" id="modalPassword" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="modal-login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - YoUr GYM</title>
+     <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">💪 YoUr GYM</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="plans.html" class="nav-link">Plans</a>
+                </li>
+                <li class="nav-item">
+                    <a href="workouts.html" class="nav-link">Workouts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact Us</a>
+                </li>
+               <li class="nav-item" id="loginNavItem">
+                    <a href="login.html" class="nav-link active">Login</a>
+                </li>
+                <li class="nav-item" id="logoutNavItem" style="display: none;">
+                    <a href="#" class="nav-link" onclick="handleLogout(event)">Logout</a>
+                </li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="container">
+        <section class="page-section">
+            <h1>Contact Us</h1>
+            <p style="margin-bottom: 40px;">Have questions? We'd love to hear from you. Get in touch with us using any of the methods below.</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 40px 0;">
+                <div style="background: #f5f5f5; padding: 30px; border-radius: 8px;">
+                    <h2 style="color: #ff6b6b; margin-bottom: 20px;">📍 Address</h2>
+                    <p style="line-height: 1.8;">
+                        YoUr GYM Fitness Center<br>
+                        123 Fitness Street<br>
+                        Gym City, GC 12345<br>
+                        Country
+                    </p>
+
+                    <h2 style="color: #ff6b6b; margin-bottom: 20px; margin-top: 30px;">📞 Phone</h2>
+                    <p style="line-height: 1.8;">
+                        Main: +1 (555) 123-4567<br>
+                        Membership: +1 (555) 123-4568<br>
+                        Trainer Support: +1 (555) 123-4569
+                    </p>
+
+                    <h2 style="color: #ff6b6b; margin-bottom: 20px; margin-top: 30px;">⏰ Hours</h2>
+                    <p style="line-height: 1.8;">
+                        Monday - Friday: 6 AM - 10 PM<br>
+                        Saturday: 7 AM - 9 PM<br>
+                        Sunday: 8 AM - 6 PM<br>
+                        Holidays: 9 AM - 5 PM
+                    </p>
+                </div>
+
+                <div style="background: #f5f5f5; padding: 30px; border-radius: 8px;">
+                    <h2 style="color: #ff6b6b; margin-bottom: 20px;">✉️ Send us a Message</h2>
+                    <form>
+                        <div style="margin-bottom: 15px;">
+                            <label style="display: block; margin-bottom: 5px; font-weight: 600;">Name</label>
+                            <input type="text" placeholder="Your Name" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                        </div>
+                        
+                        <div style="margin-bottom: 15px;">
+                            <label style="display: block; margin-bottom: 5px; font-weight: 600;">Email</label>
+                            <input type="email" placeholder="your@email.com" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                        </div>
+                        
+                        <div style="margin-bottom: 15px;">
+                            <label style="display: block; margin-bottom: 5px; font-weight: 600;">Message</label>
+                            <textarea placeholder="Your message..." rows="5" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; font-family: inherit;"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%; cursor: pointer;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px; background: #fff3f3; padding: 20px; border-radius: 8px; border-left: 4px solid #ff6b6b;">
+                <h3 style="color: #ff6b6b; margin-bottom: 10px;">Follow Us on Social Media</h3>
+                <p>Stay updated with our latest offers and fitness tips on Facebook, Instagram, and Twitter @YoUrGYM</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 YoUr GYM. All rights reserved.</p>
+    </footer>
+
+    <!-- Login Modal Popup -->
+    <div class="login-modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>💪 Login</h2>
+                <button class="close-btn" onclick="closeLoginModal()">&times;</button>
+            </div>
+            <div class="modal-error" id="modalError"></div>
+            <form class="modal-form" id="modalLoginForm" onsubmit="handleModalLogin(event)">
+                <div class="form-group">
+                    <label for="modalEmail">Email Address</label>
+                    <input type="email" id="modalEmail" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="modalPassword">Password</label>
+                    <input type="password" id="modalPassword" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="modal-login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - YoUr GYM</title>
+     <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">💪 YoUr GYM</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link active">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="plans.html" class="nav-link">Plans</a>
+                </li>
+                <li class="nav-item">
+                    <a href="workouts.html" class="nav-link">Workouts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+                 <li class="nav-item" id="loginNavItem">
+                    <a href="login.html" class="nav-link active">Login</a>
+                </li>
+                <li class="nav-item" id="logoutNavItem" style="display: none;">
+                    <a href="#" class="nav-link" onclick="handleLogout(event)">Logout</a>
+                </li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="container">
+        <section class="page-section">
+            <h1>About Us</h1>
+            <p>Welcome to YoUr GYM, India's premier fitness destination since 2015. We've been serving the community with top-notch facilities, expert training, and a supportive environment for fitness enthusiasts of all levels. Our commitment is to help every member achieve their fitness goals and live a healthier lifestyle.</p>
+            
+            <h2>Our Mission</h2>
+            <p>Our mission is to empower individuals to achieve their fitness goals through comprehensive training programs, state-of-the-art equipment, and personalized coaching. We believe that fitness is a journey, not a destination, and we're here to support you every step of the way. At YoUr GYM, we combine science-based training with a community-focused approach to create transformations.</p>
+
+            <h2>Our Vision</h2>
+            <p>To be India's most trusted gym brand, recognized for producing measurable fitness results, developing world-class trainers, and creating a community where fitness becomes a lifestyle.</p>
+
+            <h2>Why Choose YoUr GYM?</h2>
+            <ul style="list-style: none; margin-top: 15px;">
+                <li style="padding: 10px 0;">✓ <strong>24/7 Access</strong> - Train whenever suits your schedule</li>
+                <li style="padding: 10px 0;">✓ <strong>World-Class Equipment</strong> - Latest cardio, strength, and functional training equipment</li>
+                <li style="padding: 10px 0;">✓ <strong>Expert Trainers</strong> - Certified professionals with 10+ years experience</li>
+                <li style="padding: 10px 0;">✓ <strong>Personalized Plans</strong> - Customized fitness and nutrition programs</li>
+                <li style="padding: 10px 0;">✓ <strong>Group Classes</strong> - Yoga, CrossFit, Zumba, and HIIT programs</li>
+                <li style="padding: 10px 0;">✓ <strong>Community Support</strong> - Join 500+ active members in your fitness journey</li>
+            </ul>
+
+            <h2>Our Achievements</h2>
+            <div class="about-highlights" style="margin-top: 20px;">
+                <div class="highlight">
+                    <h4>10+ Years</h4>
+                    <p>Serving the fitness community</p>
+                </div>
+                <div class="highlight">
+                    <h4>500+ Members</h4>
+                    <p>Active and committed members</p>
+                </div>
+                <div class="highlight">
+                    <h4>15+ Trainers</h4>
+                    <p>Certified fitness professionals</p>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 40px;">Meet Our Best Trainers</h2>
+            <p style="margin-bottom: 30px;">Our team of expert trainers is dedicated to helping you achieve your fitness goals. With combined experience of over 100 years, they bring knowledge, passion, and motivation to every session.</p>
+            
+            <div class="trainers-grid">
+                <div class="trainer-card">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop" alt="Rahul Sharma">
+                    <h3>Rahul Sharma</h3>
+                    <p class="trainer-title">Head Trainer - Strength & Conditioning</p>
+                    <p class="trainer-bio">15+ years of experience in fitness training. Specializes in strength building, powerlifting, and weight loss programs. Certified by INBA and ISSA.</p>
+                    <div class="trainer-skills">Strength • Gym • Nutrition</div>
+                </div>
+                <div class="trainer-card">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop" alt="Priya Verma">
+                    <h3>Priya Verma</h3>
+                    <p class="trainer-title">Cardio & Weight Loss Specialist</p>
+                    <p class="trainer-bio">12+ years experience in weight loss and cardio training. Helped 1000+ clients achieve their goals. Expert in HIIT and functional fitness.</p><br>
+                    <div class="trainer-skills">Cardio • Weight Loss • HIIT</div>
+                </div>
+                <div class="trainer-card">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop" alt="Arjun Singh">
+                    <h3>Arjun Singh</h3>
+                    <p class="trainer-title">Yoga & Flexibility Coach</p>
+                    <p class="trainer-bio">Certified yoga instructor with 10+ years experience. Specializes in flexibility, mind-body wellness, and injury recovery programs.</p><br>
+                    <div class="trainer-skills">Yoga • Flexibility • Wellness</div>
+                </div>
+                <div class="trainer-card">
+                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=300&h=300&fit=crop" alt="Neha Patel">
+                    <h3>Neha Patel</h3>
+                    <p class="trainer-title">CrossFit & Functional Training Coach</p>
+                    <p class="trainer-bio">Certified CrossFit Level 2 instructor with 8+ years experience. Specializes in functional fitness and athletic performance training.</p>
+                    <div class="trainer-skills">CrossFit • Functional • Performance</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 YoUr GYM. All rights reserved.</p>
+    </footer>
+
+    <!-- Login Modal Popup -->
+    <div class="login-modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>💪 Login</h2>
+                <button class="close-btn" onclick="closeLoginModal()">&times;</button>
+            </div>
+            <div class="modal-error" id="modalError"></div>
+            <form class="modal-form" id="modalLoginForm" onsubmit="handleModalLogin(event)">
+                <div class="form-group">
+                    <label for="modalEmail">Email Address</label>
+                    <input type="email" id="modalEmail" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="modalPassword">Password</label>
+                    <input type="password" id="modalPassword" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="modal-login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
